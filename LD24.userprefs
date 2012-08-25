@@ -1,8 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\FlipperScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Shaders\Alpha-Diffuse.shader">
     <Files>
-      <File FileName="Assets\Scripts\FlipperScript.cs" Line="21" Column="52" />
+      <File FileName="Assets\Scripts\FlipperScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\BumperScript.cs" Line="7" Column="9" />
+      <File FileName="Assets\Shaders\Alpha-Diffuse.shader" Line="1" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -6,11 +6,9 @@ Properties {
 	_MainTex ("Base (RGB) Trans (A)", 2D) = "white" {}
 }
 
-
 SubShader {
 	Tags {"Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent"}
 	LOD 200
-Cull Off
 
 CGPROGRAM
 #pragma surface surf Lambert alpha

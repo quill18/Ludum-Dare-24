@@ -4,7 +4,7 @@ using System.Collections;
 public class BumperScript : MonoBehaviour {
 	
 	public bool roundBumper = true;
-	float bumperForce  = 100f;
+	public float bumperForce  = 100f;
 	
 	void OnCollisionEnter( Collision collision ) {
 		Debug.Log ("kicker");
