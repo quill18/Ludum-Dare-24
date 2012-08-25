@@ -46,6 +46,8 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BumperScript.cs" />
      <Compile Include="Assets\Scripts\FlipperScript.cs" />
+     <Compile Include="Assets\Scripts\PlungerScript.cs" />
+     <Compile Include="Assets\Scripts\TargetScript.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
