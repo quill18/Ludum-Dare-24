@@ -7,7 +7,6 @@ public class BumperScript : MonoBehaviour {
 	public float bumperForce  = 100f;
 	
 	void OnCollisionEnter( Collision collision ) {
-		Debug.Log ("kicker");
 		if(roundBumper) {
 			Vector3 force = collision.contacts[0].point - transform.position;
 			force = force.normalized * bumperForce;
