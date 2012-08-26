@@ -26,11 +26,9 @@ public class BumperScript : MonoBehaviour {
 		// Find a "bumper" child, if it exists.
 		
 		Transform bumper = transform.Find("bumper");
-		Debug.Log (gameObject.name);
-		Debug.Log (bumper);
 		
 		if (bumper) {
-			Debug.Log ("Found bumper child");
+			//Debug.Log ("Found bumper child");
 			bumper.animation.Play("Active");
 		}
 	}

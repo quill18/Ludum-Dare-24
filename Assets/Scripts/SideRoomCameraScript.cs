@@ -14,7 +14,7 @@ public class SideRoomCameraScript : MonoBehaviour {
 	bool movingToSide = false;
 	
 	public float transitionTime = 2f;
-	float transitionTimeLeft = 0;
+	float transitionTimePassed = 9999f;
 
 	// Use this for initialization
 	void Start () {
@@ -27,11 +27,12 @@ public class SideRoomCameraScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		transitionTimeLeft += Time.deltaTime;
 		
-		float t = (transitionTimeLeft - transitionTime) / transitionTime;
 		
-		if(t < 1f) {
+		if(transitionTimePassed < transitionTime) {
+			transitionTimePassed += Time.deltaTime;
+			float t = (transitionTimePassed ) / transitionTime;
+			
 			if(movingToSide) {
 				Camera.main.transform.position = Vector3.Lerp (mainCameraPosition, sideCameraPosition, t);
 				Camera.main.transform.rotation = Quaternion.Lerp (mainCameraRotation, sideCameraRotation, t);
@@ -43,8 +44,27 @@ public class SideRoomCameraScript : MonoBehaviour {
 		}
 	}
 	
+	public void ResetCamera() {
+		if(movingToSide) {
+			transitionTimePassed = 0;
+			movingToSide = false;
+		}
+	}
+	
 	void OnTriggerEnter(Collider collider) {
-		if(collider.tag == "Ball" ) {
+		if(collider.tag == "Ball" && movingToSide == false ) {
+			BallRoomTrackerScript s = collider.GetComponent<BallRoomTrackerScript>();
+			s.inSideRoom = true;
+			
+			GameObject[] balls = GameObject.FindGameObjectsWithTag("Ball");
+			
+			foreach (GameObject ball in balls) {
+				s = ball.GetComponent<BallRoomTrackerScript>();
+				if(!s.inSideRoom)
+					return;	// At least one ball not in side room, abort camera move.
+			}
+			
+			transitionTimePassed = 0;
 			movingToSide = true;
 		}
 	}

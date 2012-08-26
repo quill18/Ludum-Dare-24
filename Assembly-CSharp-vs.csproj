@@ -44,11 +44,18 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\BallRoomTrackerScript.cs" />
      <Compile Include="Assets\Scripts\BumperScript.cs" />
      <Compile Include="Assets\Scripts\DropTargetScript.cs" />
      <Compile Include="Assets\Scripts\FlipperScript.cs" />
+     <Compile Include="Assets\Scripts\GATCScript.cs" />
      <Compile Include="Assets\Scripts\PlungerScript.cs" />
+     <Compile Include="Assets\Scripts\PowerUpScript.cs" />
+     <Compile Include="Assets\Scripts\PowerUpSpawnSpotScript.cs" />
      <Compile Include="Assets\Scripts\RolloverScript.cs" />
+     <Compile Include="Assets\Scripts\ScoreManagerScript.cs" />
+     <Compile Include="Assets\Scripts\ScoreOnCollisionScript.cs" />
+     <Compile Include="Assets\Scripts\SideRoomCameraResetRolloverScript.cs" />
      <Compile Include="Assets\Scripts\SideRoomCameraScript.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
