@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GATCScript : MonoBehaviour {
 	
@@ -7,6 +8,25 @@ public class GATCScript : MonoBehaviour {
 	
 	static int triggeredTriggers = 0;
 	bool wasTriggered = false;
+	
+	static List<GATCScript> members;
+	
+	void Start() {
+		if(members == null)
+			members = new List<GATCScript>();
+		
+		members.Add(this);
+	}
+	
+	public static void ResetGATCTargets() {
+		triggeredTriggers = 0;
+		
+		foreach(GATCScript member in members) {
+			member.wasTriggered = false;
+			DropTargetScript dts = member.GetComponent<DropTargetScript>();
+			dts.ResetTarget();
+		}
+	}
 	
 	void OnCollisionEnter() {
 		if(!wasTriggered) {

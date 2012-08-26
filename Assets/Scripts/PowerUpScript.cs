@@ -18,4 +18,10 @@ public class PowerUpScript : MonoBehaviour {
 		transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
 		light.intensity = Mathf.Abs(Mathf.Sin(Time.realtimeSinceStartup * 2)) * lightIntensity;
 	}
+
+	void OnCollisionEnter(Collision collision) {
+		if(collision.rigidbody.tag == "Ball") {
+			Destroy (gameObject);
+		}
+	}
 }

@@ -11,4 +11,9 @@ public class DropTargetScript : MonoBehaviour {
 			transform.Translate(0, -2.9f, 0);	
 		}
 	}
+	
+	public void ResetTarget() {
+		wasHit = false;
+		transform.Translate(0, 2.9f, 0);	
+	}
 }

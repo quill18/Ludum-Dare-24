@@ -1,0 +1,27 @@
+#!/usr/local/bin/fontforge
+# Usage: [fontforge -script] generate-otf.ff SOURCEFILE [FEATUREFILE ...] OTFFILE
+
+	Open($1)
+
+# Merge feature files
+
+	shift
+	while ($argc > 2)
+		MergeFeature($1)
+		shift
+	endloop
+
+# Set unique ID in TTF name table
+
+	TTF_LANG_US = 0x0409
+	TTF_NAME_UNIQUEID = 3
+	DATE = Strftime("%Y%m%d")
+
+	SetTTFName(TTF_LANG_US, TTF_NAME_UNIQUEID, $fullname + " " + $fontversion + " " + DATE)
+
+# Generate font
+
+	FLAG_OLDKERN = 0x800 # Include old fashioned kern tables for legacy applications
+
+	Generate($1, "", FLAG_OLDKERN)
+	Quit(0)

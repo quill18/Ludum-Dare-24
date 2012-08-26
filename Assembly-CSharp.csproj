@@ -44,8 +44,12 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\BallColorScript.cs" />
      <Compile Include="Assets\Scripts\BallRoomTrackerScript.cs" />
      <Compile Include="Assets\Scripts\BumperScript.cs" />
+     <Compile Include="Assets\Scripts\DEBUGClickToSpawnScript.cs" />
+     <Compile Include="Assets\Scripts\DNAPickupScript.cs" />
+     <Compile Include="Assets\Scripts\DeathTriggerScript.cs" />
      <Compile Include="Assets\Scripts\DropTargetScript.cs" />
      <Compile Include="Assets\Scripts\FlipperScript.cs" />
      <Compile Include="Assets\Scripts\GATCScript.cs" />

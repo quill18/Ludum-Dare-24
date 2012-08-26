@@ -8,7 +8,6 @@ public class ScoreOnCollisionScript : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collision) {
 		if(collision.rigidbody.tag == "Ball") {
-			Debug.Log (ScoreManagerScript.Instance);
 			ScoreManagerScript.Instance.AddScore(scoreValue);
 		}
 	}

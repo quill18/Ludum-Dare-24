@@ -10,6 +10,9 @@ public class ScoreManagerScript : MonoBehaviour {
 		}
 	}
 	
+	int bonus = 0;
+	int bonusMultiplier = 1;
+	
 	static ScoreManagerScript instance = null;
 	static public ScoreManagerScript Instance {
 		get {
@@ -33,7 +36,29 @@ public class ScoreManagerScript : MonoBehaviour {
 	}
 	
 	void OnGUI() {
-		GUI.TextArea(new Rect(0, 0, 100, 100), "Score: " + score);
+		GUILayout.BeginArea( new Rect(0, 0, Screen.width, Screen.height) );
+			GUILayout.BeginVertical();
+				GUILayout.FlexibleSpace();
+				GUILayout.BeginHorizontal();
+					GUILayout.FlexibleSpace();
+					GUILayout.TextArea("Score: " + score);
+					GUILayout.TextArea("Bonus: " + bonus + " x " + bonusMultiplier + " = " + (bonus*bonusMultiplier));
+					GUILayout.FlexibleSpace();
+				GUILayout.EndHorizontal();
+			GUILayout.EndVertical();
+		GUILayout.EndArea();
+	}
+	
+	public void IncreaseBonusMultiplier() {
+		if(bonusMultiplier < 64) {
+			bonusMultiplier *= 2;
+		}
+	}
+	
+	public void CashInBonus() {
+		score += bonus * bonusMultiplier;
+		bonus = 0;
+		bonusMultiplier = 1;
 	}
 	
 }

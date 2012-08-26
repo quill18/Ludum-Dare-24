@@ -58,11 +58,14 @@ public class SideRoomCameraScript : MonoBehaviour {
 			
 			GameObject[] balls = GameObject.FindGameObjectsWithTag("Ball");
 			
-			foreach (GameObject ball in balls) {
+			if (balls.Length > 1)
+				return; // Don't do camera zoom if we're in a multi-ball situation.
+			
+			/*foreach (GameObject ball in balls) {
 				s = ball.GetComponent<BallRoomTrackerScript>();
 				if(!s.inSideRoom)
 					return;	// At least one ball not in side room, abort camera move.
-			}
+			}*/
 			
 			transitionTimePassed = 0;
 			movingToSide = true;
