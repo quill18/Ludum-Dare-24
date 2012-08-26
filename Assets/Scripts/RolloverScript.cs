@@ -26,4 +26,11 @@ public class RolloverScript : MonoBehaviour {
 		}
 	}
 	
+	void OnTriggerEnter(Collider other) {
+		if(rot <= 0 && other.gameObject.tag == "Ball") {
+			rot += rotTriggered;
+			transform.Find ("rotator").transform.Rotate(0, 0, rotTriggered);
+		}		
+	}
+	
 }

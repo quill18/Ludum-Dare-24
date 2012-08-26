@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\FlipperScript.cs" />
      <Compile Include="Assets\Scripts\PlungerScript.cs" />
      <Compile Include="Assets\Scripts\RolloverScript.cs" />
+     <Compile Include="Assets\Scripts\SideRoomCameraScript.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />

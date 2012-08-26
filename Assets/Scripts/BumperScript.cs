@@ -14,20 +14,23 @@ public class BumperScript : MonoBehaviour {
 		
 			collision.rigidbody.AddForce( force, ForceMode.Impulse );
 			
-			DoAnimation();
 		}
 		else {
 			Vector3 force = new Vector3( 0, 0, bumperForce );
 			collision.rigidbody.AddForce( force, ForceMode.Impulse );
 		}
+		DoAnimation();
 	}
 	
 	void DoAnimation() {
 		// Find a "bumper" child, if it exists.
 		
 		Transform bumper = transform.Find("bumper");
+		Debug.Log (gameObject.name);
+		Debug.Log (bumper);
 		
 		if (bumper) {
+			Debug.Log ("Found bumper child");
 			bumper.animation.Play("Active");
 		}
 	}
