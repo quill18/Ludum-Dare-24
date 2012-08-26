@@ -45,7 +45,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BallColorScript.cs" />
+     <Compile Include="Assets\Scripts\BallLockScript.cs" />
+     <Compile Include="Assets\Scripts\BallLockWallScript.cs" />
      <Compile Include="Assets\Scripts\BallRoomTrackerScript.cs" />
+     <Compile Include="Assets\Scripts\BallSpawnerScript.cs" />
+     <Compile Include="Assets\Scripts\BallTiltScript.cs" />
      <Compile Include="Assets\Scripts\BumperScript.cs" />
      <Compile Include="Assets\Scripts\DEBUGClickToSpawnScript.cs" />
      <Compile Include="Assets\Scripts\DNAPickupScript.cs" />
@@ -53,6 +57,8 @@
      <Compile Include="Assets\Scripts\DropTargetScript.cs" />
      <Compile Include="Assets\Scripts\FlipperScript.cs" />
      <Compile Include="Assets\Scripts\GATCScript.cs" />
+     <Compile Include="Assets\Scripts\HelpButtonScript.cs" />
+     <Compile Include="Assets\Scripts\LightBulbScript.cs" />
      <Compile Include="Assets\Scripts\PlungerScript.cs" />
      <Compile Include="Assets\Scripts\PowerUpScript.cs" />
      <Compile Include="Assets\Scripts\PowerUpSpawnSpotScript.cs" />
@@ -61,6 +67,10 @@
      <Compile Include="Assets\Scripts\ScoreOnCollisionScript.cs" />
      <Compile Include="Assets\Scripts\SideRoomCameraResetRolloverScript.cs" />
      <Compile Include="Assets\Scripts\SideRoomCameraScript.cs" />
+     <Compile Include="Assets\Scripts\SuicideRolloverScript.cs" />
+     <Compile Include="Assets\Scripts\TiltScript.cs" />
+     <Compile Include="Assets\Scripts\ToastManagerScript.cs" />
+     <Compile Include="Assets\Scripts\TripleLaneRolloverScript.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />

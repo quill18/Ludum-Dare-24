@@ -3,31 +3,78 @@ using System.Collections;
 
 public class DeathTriggerScript : MonoBehaviour {
 	
-	public GameObject ballObject;
 	public Transform ballSpawner;
+	BallSpawnerScript ballSpawnerScript;
+	
+	
+	static DeathTriggerScript instance = null;
+	static public DeathTriggerScript Instance {
+		get {
+			return instance;
+		}
+	}
+	
+	
 	
 	int extraLives = 3;
+	public int ExtraLives {
+		get {
+			return extraLives;
+		}
+	}
 	
 	// Use this for initialization
 	void Start () {
-		Instantiate(ballObject, ballSpawner.position, ballSpawner.rotation);
+		instance = this;
+		ballSpawnerScript = ballSpawner.GetComponent<BallSpawnerScript>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
+	public void AddExtraLife() {
+		extraLives++;
 	}
-	
+		
 	void OnTriggerEnter(Collider other) {
 		if(other.tag == "Ball") {
-			Destroy (other);
-			extraLives--;
-			Instantiate(ballObject, ballSpawner.position, ballSpawner.rotation);
+			BallColorScript bcs = other.GetComponent<BallColorScript>();
+			bcs.MakeEvolvedColor();
 			
-			if(extraLives == 0) {
-				Application.LoadLevel("GameOver");
+			Destroy (other.gameObject);
+			
+			GameObject[] balls = GameObject.FindGameObjectsWithTag("Ball");
+			
+			if(balls.Length <= 1) {
+				extraLives--;
+				
+				ScoreManagerScript.Instance.CashInBonus();
+			
+				if(extraLives == 0) {
+					Application.LoadLevel("GameOver");
+				}
+				else {
+					LifeResetAllObjects();
+					ballSpawnerScript.SpawnBall();
+				}
 			}
+
 		}
 	}
+	
+	void LifeResetAllObjects() {
+		GameObject[] gos = GameObject.FindObjectsOfType(typeof(GameObject)) as GameObject[];
+		
+		foreach (GameObject go in gos) {
+			go.BroadcastMessage("LifeReset", SendMessageOptions.DontRequireReceiver);
+		}
+	}
+	
+	void TotalResetAllObjects() {
+		GameObject[] gos = GameObject.FindObjectsOfType(typeof(GameObject)) as GameObject[];
+		
+		foreach (GameObject go in gos) {
+			go.BroadcastMessage("LifeReset", SendMessageOptions.DontRequireReceiver);
+			go.BroadcastMessage("TotalReset", SendMessageOptions.DontRequireReceiver);
+		}
+	}
+	
 	
 }

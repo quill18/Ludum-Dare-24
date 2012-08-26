@@ -1,25 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\DeathTriggerScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GATCScript.cs">
     <Files>
-      <File FileName="Assets\Shaders\Alpha-Diffuse.shader" Line="1" Column="1" />
-      <File FileName="Assets\Shaders\Alpha-Diffuse Two-Sided.shader" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\FlipperScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\BumperScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlungerScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\RolloverScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SideRoomCameraScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SideRoomCameraResetRolloverScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\BallRoomTrackerScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ScoreOnCollisionScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ScoreManagerScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SuicideRolloverScript.cs" Line="17" Column="1" />
+      <File FileName="Assets\Scripts\LightBulbScript.cs" Line="4" Column="29" />
       <File FileName="Assets\Scripts\DropTargetScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GATCScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PowerUpSpawnSpotScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PowerUpScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\DEBUGClickToSpawnScript.cs" Line="15" Column="10" />
-      <File FileName="Assets\Scripts\DNAPickupScript.cs" Line="13" Column="1" />
-      <File FileName="Assets\Scripts\DeathTriggerScript.cs" Line="28" Column="39" />
+      <File FileName="Assets\Scripts\BumperScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TiltScript.cs" Line="11" Column="22" />
+      <File FileName="Assets\Scripts\BallTiltScript.cs" Line="8" Column="16" />
+      <File FileName="Assets\Scripts\HelpButtonScript.cs" Line="25" Column="24" />
+      <File FileName="Assets\Scripts\GATCScript.cs" Line="36" Column="41" />
+      <File FileName="Assets\Scripts\DNAPickupScript.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

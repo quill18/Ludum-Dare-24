@@ -16,9 +16,9 @@ public class BumperScript : MonoBehaviour {
 			
 		}
 		else {
-			Debug.Log (transform.forward);
+//			Debug.Log (transform.forward);
 			Vector3 force = transform.forward.normalized * -bumperForce ; //new Vector3( 0, 0, bumperForce );
-			Debug.Log (force);
+//			Debug.Log (force);
 			collision.rigidbody.AddForce( force, ForceMode.Impulse );
 		}
 		DoAnimation();

@@ -7,10 +7,15 @@ public class BallColorScript : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+	}
+	
+	public void UseEvolvedColor() {
 		transform.Find ("BallModel").renderer.material.color = evolvedColor; //new Color(0, 1f, 0);
 	}
 	
 	public void RandomizeColor() {
+		Debug.Log ("RandomizeColor");
+		
 		Color currentColor = transform.Find ("BallModel").renderer.material.color;
 		
 		int r = Random.Range(0, 2);
@@ -24,7 +29,6 @@ public class BallColorScript : MonoBehaviour {
 		else {
 			currentColor.b = Random.Range(.5f, 1f);
 		}
-		
 		transform.Find ("BallModel").renderer.material.color = currentColor;
 	}
 	

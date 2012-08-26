@@ -58,6 +58,8 @@ public class SideRoomCameraScript : MonoBehaviour {
 			
 			GameObject[] balls = GameObject.FindGameObjectsWithTag("Ball");
 			
+			ToastManagerScript.Instance.ShowToast(ToastManagerScript.Instance.texGeographicIsolation);
+			
 			if (balls.Length > 1)
 				return; // Don't do camera zoom if we're in a multi-ball situation.
 			

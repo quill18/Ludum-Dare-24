@@ -33,7 +33,7 @@ public class GATCScript : MonoBehaviour {
 			wasTriggered = true;
 			triggeredTriggers++;
 			
-			if(triggeredTriggers >= 4) {
+			if(triggeredTriggers >= members.Count) {
 				SpawnDNA();
 			}
 		}

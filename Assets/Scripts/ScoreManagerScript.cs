@@ -3,6 +3,14 @@ using System.Collections;
 
 public class ScoreManagerScript : MonoBehaviour {
 	
+	public GUISkin guiSkin;
+	public GameObject deathTrigger;
+	DeathTriggerScript deathTriggerScript;
+	
+	int scoreMultiplier = 100;
+	
+	int nextExtraLife = 25000;
+	
 	int score = 0;
 	public int Score {
 		get {
@@ -29,23 +37,42 @@ public class ScoreManagerScript : MonoBehaviour {
 	void Start () {
 		if( instance == null ) 
 			instance = this;
+		
+		deathTriggerScript = deathTrigger.GetComponent<DeathTriggerScript>();
 	}
 	
 	public void AddScore(int v) {
-		score += v;
+		score += v * scoreMultiplier;
+		
+		if(score > nextExtraLife) {
+			DeathTriggerScript.Instance.AddExtraLife();
+			ToastManagerScript.Instance.ShowToast(ToastManagerScript.Instance.texExtraLife);
+			
+			if(nextExtraLife < 50000)
+				nextExtraLife=50000;
+			else
+				nextExtraLife += 50000;
+		}
+	}
+	
+	public void AddBonus(int v) {
+		bonus += v * scoreMultiplier;
 	}
 	
 	void OnGUI() {
+		GUI.skin = guiSkin;
 		GUILayout.BeginArea( new Rect(0, 0, Screen.width, Screen.height) );
-			GUILayout.BeginVertical();
+			GUILayout.BeginHorizontal();
+				GUILayout.BeginVertical();
+					GUILayout.FlexibleSpace();
+					GUILayout.BeginVertical("Box");
+						GUILayout.Label("Extra Lives: " + string.Format("{0:n0}", deathTriggerScript.ExtraLives));
+						GUILayout.Label("Score: " + string.Format("{0:n0}", score));
+						GUILayout.Label("Bonus: " + bonus + " x " + bonusMultiplier + " = " + (bonus*bonusMultiplier));
+					GUILayout.EndVertical();
+				GUILayout.EndVertical();
 				GUILayout.FlexibleSpace();
-				GUILayout.BeginHorizontal();
-					GUILayout.FlexibleSpace();
-					GUILayout.TextArea("Score: " + score);
-					GUILayout.TextArea("Bonus: " + bonus + " x " + bonusMultiplier + " = " + (bonus*bonusMultiplier));
-					GUILayout.FlexibleSpace();
-				GUILayout.EndHorizontal();
-			GUILayout.EndVertical();
+			GUILayout.EndHorizontal();
 		GUILayout.EndArea();
 	}
 	
@@ -56,7 +83,7 @@ public class ScoreManagerScript : MonoBehaviour {
 	}
 	
 	public void CashInBonus() {
-		score += bonus * bonusMultiplier;
+		AddScore(bonus * bonusMultiplier);
 		bonus = 0;
 		bonusMultiplier = 1;
 	}
