@@ -1,5 +1,6 @@
 #Unity Version 3.5.x Ignores
 /*
 !.gitignore
+!README.md
 !/Assets/
 !/ProjectSettings/
