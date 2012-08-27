@@ -25,7 +25,7 @@ public class TripleLaneRolloverScript : MonoBehaviour {
 	
 	public void LifeReset() {
 		wasTriggered = false;
-		numberTriggered--;
+		numberTriggered = 0;
 		LightBulbScript lbs = lightBulb.GetComponent<LightBulbScript>();
 		lbs.TurnOff();		
 		ActivateSuicideLaneBonus(false);

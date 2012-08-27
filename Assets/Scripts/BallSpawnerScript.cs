@@ -15,6 +15,7 @@ public class BallSpawnerScript : MonoBehaviour {
 		BallColorScript bcs = ball.GetComponent<BallColorScript>();
 		
 		if(randomizeColor) {
+			bcs.UseEvolvedColor();
 			bcs.RandomizeColor();
 		}
 		else {

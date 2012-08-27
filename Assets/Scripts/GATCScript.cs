@@ -28,6 +28,11 @@ public class GATCScript : MonoBehaviour {
 		}
 	}
 	
+	public void LifeReset() {
+		triggeredTriggers=0;
+		wasTriggered = false;
+	}
+	
 	void OnCollisionEnter() {
 		if(!wasTriggered) {
 			wasTriggered = true;

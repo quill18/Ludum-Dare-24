@@ -23,6 +23,7 @@ public class RolloverScript : MonoBehaviour {
 		if(rot <= 0 && collision.gameObject.tag == "Ball") {
 			rot += rotTriggered;
 			transform.Find ("rotator").transform.Rotate(0, 0, rotTriggered);
+			audio.Play();
 		}
 	}
 	
@@ -30,6 +31,7 @@ public class RolloverScript : MonoBehaviour {
 		if(rot <= 0 && other.gameObject.tag == "Ball") {
 			rot += rotTriggered;
 			transform.Find ("rotator").transform.Rotate(0, 0, rotTriggered);
+			audio.Play();
 		}		
 	}
 	

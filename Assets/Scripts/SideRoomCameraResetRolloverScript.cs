@@ -25,7 +25,6 @@ public class SideRoomCameraResetRolloverScript : MonoBehaviour {
 			BallLockWallScript blws = ballLockWall.GetComponent<BallLockWallScript>();
 			blws.LowerWall();
 			
-			ToastManagerScript.Instance.ShowToast(ToastManagerScript.Instance.texBreedingGround);
 			
 		}
 	}

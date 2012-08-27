@@ -1,0 +1,668 @@
+2012-01-05  Storlek  <storlek@rigelseven.com>
+
+	* .hgtags:
+	Added tag 20120105 for changeset 78793a40be0e
+	[c966b4b1c006] [tip]
+
+	* Makefile.am, NEWS, README, configure.ac, fmt/669.c, fmt/aiff.c,
+	fmt/ams.c, fmt/au.c, fmt/compression.c, fmt/f2r.c, fmt/far.c,
+	fmt/generic.c, fmt/imf.c, fmt/it.c, fmt/iti.c, fmt/its.c, fmt/liq.c,
+	fmt/mdl.c, fmt/med.c, fmt/mf.c, fmt/mid.c, fmt/mod.c, fmt/mp3.c,
+	fmt/mt2.c, fmt/mtm.c, fmt/mus.c, fmt/ntk.c, fmt/ogg.c, fmt/okt.c,
+	fmt/pat.c, fmt/raw.c, fmt/s3i.c, fmt/s3m.c, fmt/sfx.c, fmt/sid.c,
+	fmt/stm.c, fmt/ult.c, fmt/wav.c, fmt/xi.c, fmt/xm.c,
+	helptext/copyright, include/charset.h, include/clippy.h, include
+	/config-parser.h, include/disko.h, include/dmoz.h, include/draw-
+	char.h, include/event.h, include/fmt-types.h, include/fmt.h,
+	include/headers.h, include/it.h, include/log.h, include/midi.h,
+	include/osdefs.h, include/page.h, include/pattern-view.h, include
+	/sample-edit.h, include/slurp.h, include/song.h, include/tables.h,
+	include/tree.h, include/util.h, include/version.h, include/video.h,
+	player/csndfile.c, player/dsp.c, player/effects.c,
+	player/equalizer.c, player/filters.c, player/fmpatches.c,
+	player/mixer.c, player/mixutil.c, player/snd_fm.c, player/snd_gm.c,
+	player/sndmix.c, player/tables.c, schism/audio_loadsave.c,
+	schism/audio_playback.c, schism/charset.c, schism/clippy.c, schism
+	/config-parser.c, schism/config.c, schism/dialog.c, schism/disko.c,
+	schism/dmoz.c, schism/draw-char.c, schism/draw-misc.c,
+	schism/fakemem.c, schism/itf.c, schism/keyboard.c, schism/main.c,
+	schism/menu.c, schism/midi-core.c, schism/midi-ip.c,
+	schism/mplink.c, schism/page.c, schism/page_about.c,
+	schism/page_blank.c, schism/page_config.c, schism/page_help.c,
+	schism/page_info.c, schism/page_instruments.c,
+	schism/page_loadinst.c, schism/page_loadmodule.c,
+	schism/page_loadsample.c, schism/page_log.c, schism/page_message.c,
+	schism/page_midi.c, schism/page_midiout.c, schism/page_orderpan.c,
+	schism/page_palette.c, schism/page_patedit.c,
+	schism/page_preferences.c, schism/page_samples.c,
+	schism/page_vars.c, schism/page_waterfall.c, schism/palettes.c,
+	schism/pattern-view.c, schism/sample-edit.c, schism/sample-view.c,
+	schism/slurp.c, schism/status.c, schism/tree.c, schism/util.c,
+	schism/version.c, schism/video.c, schism/volume-core.c, schism
+	/widget-keyhandler.c, schism/widget.c, schism/xpmdata.c,
+	sys/alsa/init.c, sys/alsa/midi-alsa.c, sys/alsa/volume-alsa.c,
+	sys/macosx/Schism_Tracker.app/Contents/Info.plist, sys/macosx/ibook-
+	support.c, sys/macosx/macosx-sdlmain.m, sys/macosx/midi-macosx.c,
+	sys/macosx/osdefs.c, sys/macosx/volume-macosx.c, sys/oss/midi-oss.c,
+	sys/oss/volume-oss.c, sys/posix/schismtracker.1, sys/posix/slurp-
+	mmap.c, sys/wii/osdefs.c, sys/win32/filetype.c, sys/win32/midi-
+	win32mm.c, sys/win32/osdefs.c, sys/win32/schismres.rc, sys/win32
+	/slurp-win32.c, sys/win32/volume-win32mm.c, sys/x11/xkb.c,
+	sys/x11/xscreensaver.c, sys/x11/xv.c:
+	2012
+	[78793a40be0e] [20120105]
+
+2011-11-08  Storlek  <storlek@rigelseven.com>
+
+	* player/effects.c:
+	committing patch from >>>/scdev/1408 to fix (another) ubuntu crash
+	[5c20930d1e3a]
+
+2011-09-29  Storlek  <storlek@rigelseven.com>
+
+	* Makefile.am:
+	--- Makefile.am | 2 +- 1 file changed, 1 insertion(+), 1
+	deletion(-)
+	[8a8ac76e23f9]
+
+2011-08-13  Storlek  <storlek@rigelseven.com>
+
+	* fmt/generic.c:
+	don't write garbage when swapping portamento to the volume column.
+	it crashes.
+
+	<Saga_Musix> i think what you really mean is *p = 9 - right?
+	<Storlek> Saga_Musix: you notice that it returns after that case
+	<Saga_Musix> yes, but then you have FF in the volume column
+	[1c114172b5b3]
+
+	* schism/page_patedit.c:
+	add hidden option for inverted (more FT2-like) home/end behavior on
+	pattern editor
+	[4f063cf5324b]
+
+2011-08-12  Storlek  <storlek@rigelseven.com>
+
+	* schism/disko.c:
+	print more detailed information when finishing disk write
+	(>>>/scdev/1254)
+	[96210f9368dd]
+
+	* schism/page_patedit.c:
+	pattern editor: enter key -> search channel for instrument number if
+	none under cursor. (requested by distance) This currently requires
+	manual config editing to enable.
+	[c0285f100207]
+
+2011-08-10  Storlek  <storlek@rigelseven.com>
+
+	* schism/disko.c, schism/page_samples.c:
+	Less picky sample-replacement checking for pattern-to-sample
+	rendering. Also, slight changes to sample replacement confirmation
+	dialog text to make it more consistent.
+	[d1183f4ecad0]
+
+2011-08-07  Storlek  <storlek@rigelseven.com>
+
+	* include/disko.h, include/fmt.h, schism/audio_loadsave.c,
+	schism/disko.c, schism/page_loadmodule.c:
+	add const qualifiers (save formats never change)
+	[5b7f24323d49]
+
+2011-07-31  Storlek  <storlek@rigelseven.com>
+
+	* schism/page_instruments.c:
+	inst list: Alt-Shift-A on trans table copies sample name as well as
+	assigning sample numbers
+	[3c26bc7f260d]
+
+2011-06-24  Storlek  <storlek@rigelseven.com>
+
+	* schism/main.c:
+	dialog mouse fix (>>>/scdev/1158) bug introduced in cea29e422127;
+	hopefully this fixes it without weird side effects!
+	[7620585e2cc1]
+
+	* schism/page_instruments.c:
+	fix loop points when deleting last point in envelope
+	(>>>/scdev/1206)
+	[5915346bbd1c]
+
+	* fmt/imf.c:
+	fixes for filters in IMF (>>>/scdev/1237)
+	[2bf71ebe2e6e]
+
+	* include/it.h, schism/config.c, schism/page_loadmodule.c:
+	Adding a separate glob pattern for Shift-F10 (see >>>/scdev/1197)
+	[58587eba1410]
+
+	* schism/page_loadmodule.c:
+	Shift-F10 now provides a dialog if the orderlist is empty
+	(>>>/scdev/1165)
+	[eb659be6f363]
+
+	* schism/page_loadinst.c, schism/page_loadsample.c:
+	set save flag when loading a sample/instrument
+	[f020a620208d]
+
+	* fmt/imf.c, schism/midi-core.c, schism/page_loadmodule.c,
+	schism/page_loadsample.c, schism/page_patedit.c, schism/widget.c,
+	schism/xpmdata.c, sys/alsa/init.c:
+	fixes to build with -Wunused-but-set-variable
+	[f51007bf50a0]
+
+2011-04-08  Storlek  <storlek@rigelseven.com>
+
+	* schism/page.c, schism/page_about.c, schism/widget-keyhandler.c:
+	pressing Ctrl-F2 and some other keys at startup was segfaulting.
+	Fixed. Also some tidying up.
+	[629228ddb23e]
+
+2011-03-30  Storlek  <storlek@rigelseven.com>
+
+	* include/page.h, schism/widget.c:
+	remove redundancy (find_widget_xy is only used once and doesn't need
+	a pointer)
+	[a949fddc6e1d]
+
+2011-03-26  Storlek  <storlek@rigelseven.com>
+
+	* fmt/s3m.c:
+	doip
+	[fdcb72459b48]
+
+	* fmt/s3m.c:
+	fix out-of-range A/Txx values in s3m
+	[a3e06cdbeb13]
+
+	* fmt/s3m.c, schism/sample-view.c:
+	sanity check in sample view, also why was the s3m loader ignoring
+	zero parapointer samples?
+	[2948a9af11cc]
+
+	* include/it.h, schism/page_loadsample.c, schism/page_samples.c,
+	schism/sample-view.c:
+	remove unused parameter from draw_sample_data; style cleanup
+	[5d88e769a7d1]
+
+2011-02-10  Storlek  <storlek@rigelseven.com>
+
+	* player/effects.c:
+	fix tempo slide inaccuracy in length calculation
+	[22a3f1836598]
+
+	* player/effects.c:
+	margarine
+	[131b3e4c5d2b]
+
+	* player/effects.c:
+	clarifying some of csf_get_length, no change in functionality
+	[e00fe3160cab]
+
+2011-01-01  Storlek  <storlek@rigelseven.com>
+
+	* .hgtags:
+	Added tag 20110101 for changeset 7cd58bda0940
+	[aa35da8c7061]
+
+	* whoops, update first
+	[7cd58bda0940] [20110101]
+
+	* Makefile.am:
+	windres vpath build fix
+	[fc711601bfcd]
+
+	* NEWS:
+	news for 20110101
+	[bb5072951b2f]
+
+	* README, configure.ac, fmt/669.c, fmt/aiff.c, fmt/ams.c, fmt/au.c,
+	fmt/compression.c, fmt/f2r.c, fmt/far.c, fmt/generic.c, fmt/imf.c,
+	fmt/it.c, fmt/iti.c, fmt/its.c, fmt/liq.c, fmt/mdl.c, fmt/med.c,
+	fmt/mf.c, fmt/mid.c, fmt/mod.c, fmt/mp3.c, fmt/mt2.c, fmt/mtm.c,
+	fmt/mus.c, fmt/ntk.c, fmt/ogg.c, fmt/okt.c, fmt/pat.c, fmt/raw.c,
+	fmt/s3i.c, fmt/s3m.c, fmt/sfx.c, fmt/sid.c, fmt/stm.c, fmt/ult.c,
+	fmt/wav.c, fmt/xi.c, fmt/xm.c, helptext/copyright,
+	include/charset.h, include/clippy.h, include/config-parser.h,
+	include/disko.h, include/dmoz.h, include/draw-char.h,
+	include/event.h, include/fmt-types.h, include/fmt.h,
+	include/headers.h, include/it.h, include/log.h, include/midi.h,
+	include/osdefs.h, include/page.h, include/pattern-view.h, include
+	/sample-edit.h, include/slurp.h, include/song.h, include/tables.h,
+	include/tree.h, include/util.h, include/version.h, include/video.h,
+	player/csndfile.c, player/dsp.c, player/effects.c,
+	player/equalizer.c, player/filters.c, player/fmpatches.c,
+	player/mixer.c, player/mixutil.c, player/snd_fm.c, player/snd_gm.c,
+	player/sndmix.c, player/tables.c, schism/audio_loadsave.c,
+	schism/audio_playback.c, schism/charset.c, schism/clippy.c, schism
+	/config-parser.c, schism/config.c, schism/dialog.c, schism/disko.c,
+	schism/dmoz.c, schism/draw-char.c, schism/draw-misc.c,
+	schism/fakemem.c, schism/itf.c, schism/keyboard.c, schism/main.c,
+	schism/menu.c, schism/midi-core.c, schism/midi-ip.c,
+	schism/mplink.c, schism/page.c, schism/page_about.c,
+	schism/page_blank.c, schism/page_config.c, schism/page_help.c,
+	schism/page_info.c, schism/page_instruments.c,
+	schism/page_loadinst.c, schism/page_loadmodule.c,
+	schism/page_loadsample.c, schism/page_log.c, schism/page_message.c,
+	schism/page_midi.c, schism/page_midiout.c, schism/page_orderpan.c,
+	schism/page_palette.c, schism/page_patedit.c,
+	schism/page_preferences.c, schism/page_samples.c,
+	schism/page_vars.c, schism/page_waterfall.c, schism/palettes.c,
+	schism/pattern-view.c, schism/sample-edit.c, schism/sample-view.c,
+	schism/slurp.c, schism/status.c, schism/tree.c, schism/util.c,
+	schism/version.c, schism/video.c, schism/volume-core.c, schism
+	/widget-keyhandler.c, schism/widget.c, schism/xpmdata.c,
+	sys/alsa/init.c, sys/alsa/midi-alsa.c, sys/alsa/volume-alsa.c,
+	sys/macosx/Schism_Tracker.app/Contents/Info.plist, sys/macosx/ibook-
+	support.c, sys/macosx/macosx-sdlmain.m, sys/macosx/midi-macosx.c,
+	sys/macosx/osdefs.c, sys/macosx/volume-macosx.c, sys/oss/midi-oss.c,
+	sys/oss/volume-oss.c, sys/posix/schismtracker.1, sys/posix/slurp-
+	mmap.c, sys/wii/osdefs.c, sys/win32/filetype.c, sys/win32/midi-
+	win32mm.c, sys/win32/osdefs.c, sys/win32/slurp-win32.c, sys/win32
+	/volume-win32mm.c, sys/x11/xkb.c, sys/x11/xscreensaver.c,
+	sys/x11/xv.c:
+	Happy new year!
+	[629c10a77f24]
+
+2010-12-31  Storlek  <storlek@rigelseven.com>
+
+	* schism/page.c:
+	fix ctrl-f2 ctrl-f2 ctrl-f2 ctrl-f2 ctrl-f2 ctrl-f2 ctrl-f2 ctrl-f2
+	ctrl-f2 esc
+	[b2b52e769743]
+
+	* Makefile.am, sys/win32/schismres.rc:
+	Windows: adding some resources for the version/copyright junk in
+	properties dialog this might break compilation in some cases, but it
+	WorksForMe™
+	[555f94acb860]
+
+	* include/util.h, schism/config.c, schism/util.c:
+	Windows: default to My Documents; much less convoluted method of
+	fetching app data dir
+	[e7bf678dff57]
+
+	* schism/config-parser.c:
+	write config file in 'b' mode (prevents a ton of extraneous \r
+	characters on windows)
+	[e8670f8fc1b5]
+
+2010-12-27  Storlek  <storlek@rigelseven.com>
+
+	* merge
+	[4279aa4c689c]
+
+	* sys/stdlib/mkstemp.c:
+	fdopen evidently needs O_BINARY handholding elsewhere (fix for
+	ultra-nasty data corruption on a certain popular OS that uses
+	braindead \r\n line separators)
+	[c4cf1b3a0dd9]
+
+2010-12-26  Storlek  <storlek@rigelseven.com>
+
+	* fmt/xi.c:
+	eof is defined in some header on some system
+	[c0522eae5082]
+
+2010-12-06  Storlek  <storlek@rigelseven.com>
+
+	* schism/main.c, sys/posix/schismtracker.1:
+	documenting --diskwrite in manpage (also fix a couple dashes, and
+	add a reminder)
+	[99be683152a0]
+
+2010-11-28  Storlek  <storlek@rigelseven.com>
+
+	* .hgtags:
+	Added tag 20101128 for changeset 71bd3d1ecf81
+	[8f5c3245ccbb]
+
+	* Makefile.am, NEWS, README, TODO, sys/posix/schismtracker.1:
+	manpage, also fixing some urls
+	[71bd3d1ecf81] [20101128]
+
+2010-11-27  Storlek  <storlek@rigelseven.com>
+
+	* .hgtags:
+	Added tag 20101127 for changeset 5905b870ad56
+	[b4078ff3937c]
+
+	* NEWS:
+	update news
+	[5905b870ad56] [20101127]
+
+2010-11-21  Storlek  <storlek@rigelseven.com>
+
+	* schism/page_help.c, schism/page_instruments.c:
+	fix main menu page-flipping bugs (f4-esc-f4 and f1-rclick-esc)
+	[75b7608d9519]
+
+	* schism/page.c:
+	hacks upon hacks: work around f2-esc-f2 bug
+	[40baf29ebf55]
+
+2010-11-20  Storlek  <storlek@rigelseven.com>
+
+	* schism/main.c:
+	debug takes an argument
+	[2a011e38ecfd]
+
+	* schism/page.c:
+	hours and seconds are not interchangeable
+	[035133d23dee]
+
+	* player/csndfile.c:
+	another attempt at loading idiotic 24-bit wav files
+	[b59b3221e46a]
+
+	* schism/disko.c:
+	fixed
+	[0d01e716f268]
+
+	* include/it.h, schism/itf.c, schism/main.c, schism/page.c,
+	schism/util.c:
+	localtime_r and tzset
+	[03d3f8e66783]
+
+	* include/headers.h:
+	header file stupidity
+	[35ec4e2740d4]
+
+	* schism/disko.c, schism/page.c:
+	escape cancels diskwrite
+	[9c2c7b77ca54]
+
+2010-11-19  Storlek  <storlek@rigelseven.com>
+
+	* schism/main.c:
+	even better
+	[cea29e422127]
+
+	* schism/main.c, schism/menu.c:
+	Fixing some menu-related crashes and weirdnesses.
+	- right clicking the top of the screen from the startup dialog was
+	opening the menu
+	- combination of ctrl-f11 + right click would "stack up" menus and
+	cause a buffer overflow
+	[be0df50658b5]
+
+	* schism/midi-core.c:
+	start playback on MIDI start/continue (FA/FC)
+	[56ca8de989d4]
+
+	* scripts/timestamp.py:
+	hours were quite wrong
+	[085fa1b9b8f9]
+
+	* schism/audio_playback.c:
+	account for instrument global volume in keyjazz
+	[cca37f2ccf61]
+
+2010-11-14  Storlek  <storlek@rigelseven.com>
+
+	* schism/page_instruments.c:
+	prevent FPE when trying to draw play marks on broken envelopes
+	[8a346b750f7e]
+
+	* include/pattern-view.h, include/sndfile.h, player/csndfile.c,
+	schism/page_info.c, schism/page_patedit.c, schism/pattern-view.c:
+	const
+	[dad9ecb064ad]
+
+	* include/sndfile.h, player/csndfile.c, player/effects.c:
+	Length calculation improvements
+	[729b3085868f]
+
+	* schism/main.c:
+	schismtracker --diskwrite file.wav file.it AIFF is also supported,
+	as well as multichannel output if filename contains %c.
+
+	--debug removed from command-line help since it's highly unlikely to
+	be of use to anyone.
+	[5f6c9f9d6809]
+
+2010-11-07  Storlek  <storlek@rigelseven.com>
+
+	* fmt/it.c:
+	I just realized how to fix denonde.it without raping the patterns -
+	just clear the MIDI config.
+	[16d888de2d24]
+
+	* fmt/it.c, include/headers.h, include/sndfile.h, player/csndfile.c,
+	schism/audio_loadsave.c:
+	write edit history information to IT files (experimental)
+	[378f37f0a8b0]
+
+2010-11-06  Storlek  <storlek@rigelseven.com>
+
+	* scripts/timestamp.py:
+	szve
+	[d7c7c8fe9758]
+
+2010-11-05  Storlek  <storlek@rigelseven.com>
+
+	* schism/page_message.c:
+	remove pointless code that caused a weird bug
+	[a423dcd1d736]
+
+2010-11-04  Storlek  <storlek@rigelseven.com>
+
+	* fmt/iti.c, fmt/xi.c, include/song.h, schism/audio_loadsave.c,
+	schism/mplink.c, schism/page_message.c, schism/page_orderpan.c,
+	schism/page_samples.c:
+	Set save flag for all actions on sample list, order list, and
+	message; plus a bunch of other little stuff.
+	- When the ITI loader encounters a broken file, it dumps an error to
+	the log instead of the status line.
+	- Remove song_sample_get_c5speed / song_sample_set_c5speed since they
+	were pointless.
+	- Merge song_delete_sample and song_clear_sample. (why were there two?
+	no idea)
+	- Fix very subtle bug on song message screen which you probably never
+	noticed.
+	- Style changes.
+	[272fad5cf978]
+
+	* scripts/bin2h.sh, scripts/build-font.sh, scripts/genhelp.py,
+	scripts/half2itf.py, scripts/itcfg.py, scripts/itf2half.py,
+	scripts/itmidicfg.py, scripts/palette.py, scripts/timestamp.py:
+	script stuff
+	- chmod 755
+	- make the shebang lines consistent
+	- Python 2.x/3.x cross-compatibility
+	- fix silly bug that broke itcfg.py (how on earth did I mess that
+	up?!)
+	- hamster
+	[c0670628a6a7]
+
+2010-10-29  Storlek  <storlek@rigelseven.com>
+
+	* player/effects.c:
+	fix multisample pitch/pan behavior (and note dots)
+	[df873064157a]
+
+2010-10-28  Storlek  <storlek@rigelseven.com>
+
+	* schism/config.c, schism/keyboard.c, schism/main.c:
+	actually apply sharp/flat switch setting at startup
+	[b875281eedec]
+
+	* configure.ac:
+	New clang won't build clean with ludicrous - apparently -Wcast-align
+	semantics changed. Obviously the "correct" answer is to fix the
+	code, but that's somewhat more involved than I'd like to get into at
+	the moment.
+	[c4cd35197530]
+
+2010-10-18  Storlek  <storlek@rigelseven.com>
+
+	* fmt/mtm.c:
+	better error handling and sanity checks in mtm loader (thanks Luigi
+	Auriemma for that nasty test file)
+	[da90b0c27de3]
+
+2010-10-14  Storlek  <storlek@rigelseven.com>
+
+	* include/sndfile.h, player/effects.c:
+	fix note cut weirdness: SCx keeps old note frequency
+	[d4eb64e4d069]
+
+2010-10-09  Storlek  <storlek@rigelseven.com>
+
+	* Makefile.am, configure.ac:
+	detect windres' existence correctly, and also compile the icon
+	instead of totally ignoring it
+	[0190215b2a55]
+
+2010-10-08  Storlek  <storlek@rigelseven.com>
+
+	* Makefile.am, fmt/mid.c, include/fmt-types.h:
+	.mid loader! Still needs lots of work, but it kind of functions.
+	(various timing and patch related code adapted from .mus)
+	[bff4b5a9c90a]
+
+	* fmt/sfx.c:
+	SFX: I found the pattern break effect!
+	[f2a5c0079748]
+
+2010-10-07  Storlek  <storlek@rigelseven.com>
+
+	* fmt/stm.c:
+	STM loop fix (tiger.stm had loop end > sample length, ugh)
+	[d0f2e76d1bba]
+
+	* schism/page_help.c:
+	lame warning fix
+	[8aaceffbabef]
+
+2010-10-05  Storlek  <storlek@rigelseven.com>
+
+	* AUTHORS, COPYING.frag-opt, Makefile.am, include/frag-opt.h, schism
+	/frag-opt.c, schism/main.c:
+	replace frag-opt with plain gnu getopt Sorry, Midianian, but for
+	some reason it wasn't actually parsing any options anymore, and
+	getopt is standard (well, mostly) and really not much different
+	anyway. Plus, I'd like the --help output to fit cleanly on one
+	screen, which it totally wasn't.
+
+	The only clear drawback to this change is plus-negation doesn't work
+	anymore (+p, +f), so I had to invent some other way to handle those.
+	I wonder how many people actually used these options, though. (In
+	fact, I wonder how many people make regular use of the command line
+	options *at all*...)
+
+	[Apologies for anyone who's not on a system where getopt_long
+	exists. I'll sort out an autoconf macro to replace it eventually.]
+	[24278d210959]
+
+2010-10-04  Storlek  <storlek@rigelseven.com>
+
+	* fmt/s3m.c:
+	that seek is totally pointless
+	[53d68277e6a9]
+
+	* player/effects.c:
+	more partial gxx + multisample fixes
+	[4a9d9e3d559e]
+
+	* include/sndfile.h, player/effects.c:
+	fix behavior of multisample instruments with no instrument number,
+	hopefully (this makes spx-shuttledeparture.it tolerable)
+	[bc78e3c44084]
+
+	* player/effects.c:
+	remove meaningless const (stray leftover C++ cruft)
+	[b414faf261dd]
+
+2010-10-03  Storlek  <storlek@rigelseven.com>
+
+	* player/effects.c:
+	don't change samples when sliding in a multisampled instrument (I
+	think) [fix suggested by Saga_Musix]
+	[e5c3bf2a8a23]
+
+	* fmt/it.c:
+	why was this checking cmwt?
+	[b2fce3b5b270]
+
+2010-10-02  Storlek  <storlek@rigelseven.com>
+
+	* schism/page_help.c:
+	fix insane and stupid help text bug (>>>/scdev/1046)
+	[889b110f0e17]
+
+	* schism/palettes.c:
+	failsafe scheme
+	[585b7519f7f6]
+
+	* AUTHORS:
+	e-mail change, also fix typo
+	[3e7a1d48da4e]
+
+2010-09-28  Storlek  <storlek@rigelseven.com>
+
+	* fmt/it.c, schism/audio_loadsave.c:
+	apply some new knowledge regarding special & (2 | 4)
+	[83987e096503]
+
+	* scripts/timestamp.py:
+	save history script parapointer check
+	[cd48c356c125]
+
+	* fmt/it.c, include/sndfile.h, player/csndfile.c,
+	schism/audio_loadsave.c:
+	Preserve MIDI config from existing song unless new song provides its
+	own
+	[69d63bfc806e]
+
+2010-09-27  Storlek  <storlek@rigelseven.com>
+
+	* fmt/it.c:
+	fix typo in comment
+	[eeb2b78526d4]
+
+	* fmt/it.c, include/midi.h, schism/audio_loadsave.c,
+	schism/page_midi.c:
+	Make MIDI config embed flag a song property rather than a global
+	one; set it only if special bit 4 is set This is not quite
+	completely accurate behavior yet -- noticeably, MIDI config
+	shouldn't be reset when loading a file that doesn't have it
+	embedded. The flag, though, IS entirely a song property -- when
+	loading a .s3m for example, the embed switch is turned off.
+	[5cd383aea5b9]
+
+	* scripts/timestamp.py:
+	special bits 1 and 2 are set iff history data is present (thx Saga)
+	[7995124227e5]
+
+2010-09-26  Storlek  <storlek@rigelseven.com>
+
+	* scripts/timestamp.py:
+	added script to decode IT editing history
+	[4a47e6216393]
+
+	* schism/status.c:
+	oops spaces
+	[3fa74bad667f]
+
+	* include/sndfile.h, player/csndfile.c, player/sndmix.c,
+	schism/audio_loadsave.c, schism/audio_playback.c, schism/disko.c,
+	schism/status.c:
+	show song loop count in status line (like ST3)
+	[e3a114749410]
+
+2010-09-24  Storlek  <storlek@rigelseven.com>
+
+	* fmt/mod.c:
+	MOD: recognize more Startrekker format tags
+	[39f62b73ed2a]
+
+2010-09-23  Storlek  <storlek@rigelseven.com>
+
+	* fmt/xi.c:
+	XI loop fixes, again
+	[a949f3a96385]
+
+	* merge
+	[d9a5bc7d69c8]
+

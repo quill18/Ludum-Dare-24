@@ -22,6 +22,7 @@ public class BumperScript : MonoBehaviour {
 			collision.rigidbody.AddForce( force, ForceMode.Impulse );
 		}
 		DoAnimation();
+		audio.Play();
 	}
 	
 	void DoAnimation() {

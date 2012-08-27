@@ -35,25 +35,12 @@ public class DeathTriggerScript : MonoBehaviour {
 		
 	void OnTriggerEnter(Collider other) {
 		if(other.tag == "Ball") {
-			BallColorScript bcs = other.GetComponent<BallColorScript>();
-			bcs.MakeEvolvedColor();
-			
-			Destroy (other.gameObject);
+			KillBall(other.gameObject);
 			
 			GameObject[] balls = GameObject.FindGameObjectsWithTag("Ball");
 			
 			if(balls.Length <= 1) {
-				extraLives--;
-				
-				ScoreManagerScript.Instance.CashInBonus();
-			
-				if(extraLives == 0) {
-					Application.LoadLevel("GameOver");
-				}
-				else {
-					LifeResetAllObjects();
-					ballSpawnerScript.SpawnBall();
-				}
+				LoseLife();
 			}
 
 		}
@@ -74,6 +61,41 @@ public class DeathTriggerScript : MonoBehaviour {
 			go.BroadcastMessage("LifeReset", SendMessageOptions.DontRequireReceiver);
 			go.BroadcastMessage("TotalReset", SendMessageOptions.DontRequireReceiver);
 		}
+	}
+	
+	public void ExplodeAllBalls() {
+		GameObject[] balls = GameObject.FindGameObjectsWithTag("Ball");
+		foreach(GameObject ball in balls) {
+			// TODO: Make an explosion graphic here.
+			
+			KillBall (ball);
+			
+		}
+		
+		LoseLife();		
+	}
+	
+	void LoseLife() {
+		extraLives--;
+		
+		ScoreManagerScript.Instance.CashInBonus();
+		
+		if(extraLives == 0) {
+			Application.LoadLevel("GameOver");
+		}
+		else {
+			LifeResetAllObjects();
+			ballSpawnerScript.SpawnBall();
+		}
+	}
+	
+	void KillBall(GameObject ball) {
+		BallColorScript bcs = ball.GetComponent<BallColorScript>();
+		bcs.MakeEvolvedColor();
+		
+		Destroy (ball);
+		
+		audio.Play();
 	}
 	
 	

@@ -1,0 +1,6 @@
+Schism Tracker copyright (c) 2003-2012 Storlek
+
+http://schismtracker.org/
+
+Bugs? Questions? http://schismtracker.org/scdev/
+

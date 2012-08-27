@@ -9,7 +9,8 @@ public class DropTargetScript : MonoBehaviour {
 	void OnCollisionEnter(Collision collision) {
 		if(!wasHit && collision.gameObject.tag == "Ball") {
 			wasHit = true;
-			transform.Translate(0, -2.9f, 0);	
+			transform.Translate(0, -2.9f, 0);
+			audio.Play();
 		}
 	}
 	

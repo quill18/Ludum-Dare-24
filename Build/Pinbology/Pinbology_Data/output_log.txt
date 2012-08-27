@@ -1,0 +1,30 @@
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [nvd3dum.dll 8.17.13.142]
+    Renderer: NVIDIA GeForce GTX 570
+    Vendor:   NVIDIA
+    VRAM:     1233 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=0 DF24=0 INTZ=1 RAWZ=0 NULL=1 RESZ=0 SlowINTZ=0
+desktop: 1920x1080 60Hz; virtual: 3120x1920 at -1200,-840
+<RI> Initializing input.
+<RI> Input initialized.
+Initialize engine version: 3.5.5f3
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\marty\Dropbox\Unity Projects\LD24\Build\Pinbology\Pinbology_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\marty\Dropbox\Unity Projects\LD24\Build\Pinbology\Pinbology_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\marty\Dropbox\Unity Projects\LD24\Build\Pinbology\Pinbology_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\marty\Dropbox\Unity Projects\LD24\Build\Pinbology\Pinbology_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\marty\Dropbox\Unity Projects\LD24\Build\Pinbology\Pinbology_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\marty\Dropbox\Unity Projects\LD24\Build\Pinbology\Pinbology_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\marty\Dropbox\Unity Projects\LD24\Build\Pinbology\Pinbology_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading C:\Users\marty\Dropbox\Unity Projects\LD24\Build\Pinbology\Pinbology_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+- Completed reload, in  0.080 seconds
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1250. Operation took 8.550527 ms.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 319. Operation took 6.148091 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 1285. Operation took 4.844927 ms.

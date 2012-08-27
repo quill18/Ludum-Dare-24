@@ -7,7 +7,7 @@ public class ScoreManagerScript : MonoBehaviour {
 	public GameObject deathTrigger;
 	DeathTriggerScript deathTriggerScript;
 	
-	int scoreMultiplier = 100;
+	int scoreMultiplier = 25;
 	
 	int nextExtraLife = 25000;
 	
@@ -53,6 +53,8 @@ public class ScoreManagerScript : MonoBehaviour {
 			else
 				nextExtraLife += 50000;
 		}
+		
+		PlayerPrefs.SetInt ("Score", score);
 	}
 	
 	public void AddBonus(int v) {
@@ -77,13 +79,13 @@ public class ScoreManagerScript : MonoBehaviour {
 	}
 	
 	public void IncreaseBonusMultiplier() {
-		if(bonusMultiplier < 64) {
-			bonusMultiplier *= 2;
+		if(bonusMultiplier < 10) {
+			bonusMultiplier += 1;
 		}
 	}
 	
 	public void CashInBonus() {
-		AddScore(bonus * bonusMultiplier);
+		AddScore(bonus * bonusMultiplier / scoreMultiplier);
 		bonus = 0;
 		bonusMultiplier = 1;
 	}

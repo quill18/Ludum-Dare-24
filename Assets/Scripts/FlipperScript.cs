@@ -18,6 +18,11 @@ public class FlipperScript : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		JointMotor m = hingeJoint.motor;
+		
+		if( Input.GetButtonDown(buttonName) ) {
+			audio.Play();
+		}
+		
 		if( Input.GetButton(buttonName) ) {
 			m.targetVelocity = realVelocity;
 			m.force = realForce;

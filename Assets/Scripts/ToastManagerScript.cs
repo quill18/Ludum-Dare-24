@@ -9,6 +9,8 @@ public class ToastManagerScript : MonoBehaviour {
 	public Texture texBreedingGround;
 	public Texture texExtraLife;
 	public Texture texGeographicIsolation;
+	public Texture texTilt;
+	public Texture texWheelOfMutation;
 
 
 	static ToastManagerScript instance = null;

@@ -4,7 +4,7 @@ using System.Collections;
 public class TiltScript : MonoBehaviour {
 	
 	float tiltScore  = 0;
-	float tiltFactor = .5f;
+	float tiltFactor = 2.5f;
 	
 	float shakeCurrent = 0;
 	float shakeMax = 2f;
@@ -20,13 +20,20 @@ public class TiltScript : MonoBehaviour {
 		if(tiltScore > 0)
 			tiltScore -= Time.deltaTime;
 		
-		if(tiltScore > 1f) {
+		if(tiltScore > 5f) {
 			Debug.Log ("TILT ALARM");
+			tiltScore = 0;
+			DeathTriggerScript.Instance.ExplodeAllBalls();
+			ToastManagerScript.Instance.ShowToast(ToastManagerScript.Instance.texTilt);
 		}
 		
 		if(Input.GetButtonDown("Tilt")) {
 			Debug.Log ("Tilt!");
-			tiltScore += tiltFactor; 
+			tiltScore += tiltFactor;
+			
+			if(shakeCurrent <= 0)
+				realPos = transform.position;
+			
 			shakeCurrent = shakeMax;
 			GameObject[] balls = GameObject.FindGameObjectsWithTag("Ball");
 			

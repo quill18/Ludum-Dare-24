@@ -4,9 +4,11 @@ using System.Collections;
 public class BallColorScript : MonoBehaviour {
 	
 	static Color evolvedColor = new Color(0, 1f, 0);
+	static bool didEvolvedOnce = false;
 	
 	// Use this for initialization
 	void Start () {
+		
 	}
 	
 	public void UseEvolvedColor() {
