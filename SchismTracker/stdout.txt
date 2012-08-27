@@ -1,2 +1,0 @@
-Creating directory C:\Users\marty\AppData\Roaming\Schism Tracker
-Schism Tracker uses this directory to store your settings.
